@@ -1,6 +1,6 @@
-package ru.woyfit.presentation.feature.ui.main
+package ru.woyfit.presentation.feature.ui.auth
 
-import androidx.lifecycle.SavedStateHandle
+import android.os.Bundle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
@@ -13,9 +13,10 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import ru.woyfit.domain.user.AuthUseCase
 
-class MainViewModel @AssistedInject constructor(
-    @Assisted savedStateHandle: SavedStateHandle,
-    private val authUseCase: AuthUseCase) : ViewModel(){
+class AuthViewModel @AssistedInject constructor(
+    @Assisted arguments: Bundle,
+    private val authUseCase: AuthUseCase
+) : ViewModel(){
     private val isMessageShow: MutableStateFlow<Boolean> = MutableStateFlow(true)
     val isMessageShowFlow: StateFlow<Boolean>
         get() = isMessageShow
@@ -34,6 +35,6 @@ class MainViewModel @AssistedInject constructor(
 
     @AssistedFactory
     interface Factory {
-        fun create(savedStateHandle: SavedStateHandle): MainViewModel
+        fun create(arguments: Bundle?): AuthViewModel
     }
 }

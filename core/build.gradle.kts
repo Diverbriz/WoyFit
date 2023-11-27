@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "ru.woyfit.core"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 26
@@ -36,6 +36,7 @@ android {
 dependencies {
     val dagger_version = "2.40"
     implementation("androidx.core:core-ktx:1.9.0")
+    implementation ("androidx.fragment:fragment-ktx:1.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     testImplementation("junit:junit:4.13.2")
