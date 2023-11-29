@@ -34,7 +34,7 @@ android {
 }
 
 dependencies {
-    val dagger_version = "2.40"
+    val dagger_version = "2.48"
     implementation("androidx.core:core-ktx:1.9.0")
     implementation ("androidx.fragment:fragment-ktx:1.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -44,8 +44,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     // Dagger
-//    implementation ("com.google.dagger:dagger:$dagger_version")
-//    kapt("com.google.dagger:dagger-compiler:$dagger_version")
+    implementation ("com.google.dagger:dagger:$dagger_version")
+    kapt( "com.google.dagger:dagger-compiler:$dagger_version")
+    implementation ("com.squareup.inject:assisted-inject-annotations-dagger2:0.5.2")
 
     //Network
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")

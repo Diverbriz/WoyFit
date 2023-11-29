@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         private set
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initializeInjector()
+
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -38,11 +38,6 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
-    }
-
-    private fun initializeInjector() {
-        applicationComponent = AppComponent.Builder.build(this)
-        applicationComponent.inject(this)
     }
 
     override fun onSupportNavigateUp(): Boolean {
