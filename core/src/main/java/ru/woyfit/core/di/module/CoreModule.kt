@@ -9,6 +9,8 @@ import javax.inject.Singleton
 
 @Module
 class CoreModule {
+    @Singleton
+    @Provides
     fun provideApplicationContext(app: WoyfitApp): Context = app.getApplicationContext()
 
     @Singleton

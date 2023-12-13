@@ -9,14 +9,15 @@ import androidx.compose.ui.platform.ComposeView
 import ru.woyfit.app.App
 import ru.woyfit.core.base.BaseFragment
 import ru.woyfit.core.viewmodel.assistedViewModels
+import ru.woyfit.core.viewmodel.lazyViewModel
 import javax.inject.Inject
 
 class AuthFragment : BaseFragment() {
     @Inject
     lateinit var viewModelFactory: AuthViewModel.Factory
 
-    private val viewModel: AuthViewModel by assistedViewModels {
-        viewModelFactory.create(arguments)
+    private val viewModel: AuthViewModel by lazyViewModel { stateHandle ->
+        (requireActivity().applicationContext as App).appComponent.inject().create(stateHandle)
     }
     override fun injectDependencies() {
         (requireActivity().applicationContext as App).appComponent.inject(this)
@@ -28,10 +29,10 @@ class AuthFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         return ComposeView(requireContext()).apply {
             setContent {
-                Text(text = "Hello world.")
+                Text(text = viewModel.setText())
             }
         }
     }

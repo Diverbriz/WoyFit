@@ -1,6 +1,7 @@
 package ru.woyfit.app
 
 import android.app.Application
+import android.content.Context
 import ru.woyfit.core.di.CoreAuthPrefs
 import ru.woyfit.core.di.WoyfitApp
 import ru.woyfit.core.di.provider.CoreProvider
