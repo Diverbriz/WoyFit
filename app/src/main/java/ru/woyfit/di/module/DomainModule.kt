@@ -13,4 +13,6 @@ class DomainModule {
     fun provideAuthUseCase(userRepository: UserRepository):AuthUseCase{
         return AuthUseCaseImpl(userRepository = userRepository)
     }
+
+
 }

@@ -1,21 +1,33 @@
 package ru.woyfit.app
 
 import android.app.Application
+import android.content.Context
+import ru.woyfit.core.di.CoreAuthPrefs
+import ru.woyfit.core.di.WoyfitApp
+import ru.woyfit.core.di.provider.CoreProvider
+import ru.woyfit.data.local.preference.ApplicationPreference
 import ru.woyfit.di.component.AppComponent
-import ru.woyfit.di.component.DaggerAppComponent
-import ru.woyfit.di.module.AppModule
+import javax.inject.Inject
 
-class App: Application() {
+
+class App: Application(), WoyfitApp {
 
     lateinit var appComponent: AppComponent
-
+    @Inject
+    lateinit var mPrefs: ApplicationPreference
     override fun onCreate() {
         super.onCreate()
 
-        val appModule = AppModule(context = this)
-
-        appComponent = DaggerAppComponent.builder()
-            .appModule(appModule)
-            .build()
+        initializeInjector()
     }
+
+    private fun initializeInjector() {
+        appComponent = AppComponent.Builder.build(this)
+    }
+
+    override fun getApplicationProvider(): CoreProvider {
+        return appComponent
+    }
+
+    override fun getPreference(): CoreAuthPrefs = mPrefs
 }

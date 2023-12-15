@@ -1,7 +1,9 @@
 package ru.woyfit.domain.user
 
 interface AuthUseCase {
-    fun getUser(): User
+    suspend fun getUser(): User
 
-    fun getToken():String
+    suspend fun registerUser(username: String, password: String)
+    suspend fun loginUser(username: String, password: String)
+    suspend fun getToken():String
 }

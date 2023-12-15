@@ -1,19 +1,19 @@
 package ru.woyfit.di.module
 
+import android.app.Application
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import ru.woyfit.domain.user.AuthUseCase
-import ru.woyfit.presentation.feature.ui.main.MainViewModelFactory
+import ru.woyfit.app.App
+import ru.woyfit.core.di.WoyfitApp
+import javax.inject.Singleton
 
 @Module
-class AppModule(private val context: Context) {
+class AppModule {
 
     @Provides
-    fun provideContext():Context = context
-
-    @Provides
-    fun provideMainViewModelFactory(authUseCase: AuthUseCase): MainViewModelFactory{
-        return MainViewModelFactory(authUseCase = authUseCase)
+    @Singleton
+    fun provideContext(application: App): Application {
+        return application
     }
 }

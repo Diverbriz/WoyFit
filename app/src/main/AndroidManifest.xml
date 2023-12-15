@@ -2,9 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -13,11 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WoyFit"
         tools:targetApi="31">
+
         <activity
-            android:name=".presentation.feature.ui.MainActivity"
+            android:name=".app.MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.WoyFit">
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.WoyFit" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
