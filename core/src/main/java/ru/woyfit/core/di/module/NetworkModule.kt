@@ -26,10 +26,11 @@ import javax.inject.Singleton
 @Module
 class NetworkModule {
     private val requestTimeOutTime: Long = 40
+    private val baseUrl: String = "http://10.0.2.2:8080"
     @Provides
     @Singleton
     fun provideRetrofit(gson: Gson, client: OkHttpClient): Retrofit {
-        return Retrofit.Builder().baseUrl("")
+        return Retrofit.Builder().baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .client(client)
             .build()

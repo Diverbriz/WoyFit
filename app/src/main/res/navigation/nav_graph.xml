@@ -7,6 +7,6 @@
 
     <fragment
         android:id="@+id/authFragment"
-        android:name="ru.woyfit.presentation.feature.ui.auth.AuthFragment"
+        android:name="ru.woyfit.presentation.feature.auth.AuthFragment"
         android:label="AuthFragment" />
 </navigation>

@@ -5,6 +5,7 @@ import dagger.Module
 import dagger.Provides
 import ru.woyfit.data.local.preference.ApplicationPreference
 import ru.woyfit.data.local.preference.BaseSharedPreference
+import ru.woyfit.data.network.WoyfitRestApi
 import ru.woyfit.data.repository.UserRepositoryImpl
 import ru.woyfit.domain.local.preference.Preference
 import ru.woyfit.domain.user.UserRepository
@@ -23,7 +24,7 @@ class DataModule {
     }
 
     @Provides
-    fun provideUserRepository(applicationPreference: ApplicationPreference): UserRepository{
-        return UserRepositoryImpl(applicationPreferences = applicationPreference)
+    fun provideUserRepository(applicationPreference: ApplicationPreference, woyfitRestApi: WoyfitRestApi): UserRepository{
+        return UserRepositoryImpl(applicationPreferences = applicationPreference, woyfitRestApi)
     }
 }

@@ -1,4 +1,4 @@
-package ru.woyfit.presentation.feature.ui.main
+package ru.woyfit.presentation.feature.main
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -29,7 +29,7 @@ class MainViewModel @AssistedInject constructor(
     }
     fun setText():String{
         val gson = Gson()
-        return gson.toJson(authUseCase.getUser())
+        return "gson.toJson(authUseCase.getUser())"
     }
 
     @AssistedFactory

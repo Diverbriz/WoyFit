@@ -45,4 +45,57 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="enter_button">Войти</string>
+    <string name="register_button">Регистрация</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="enter_validate_login">Введите правильные данные для входа</string>
+    <string name="continue_without_registration">Продолжить без регистрации</string>
+    <string name="no_profile_question">У вас нет личного кабинета?</string>
+    <string name="search_title">Поиск по статьям</string>
+    <string name="clubs_title">Клубы</string>
+    <string name="best_articles_title">Лучшее за неделю</string>
+    <string name="clubs_all_title">Все</string>
+    <string name="interview_title">Интервью</string>
+    <string name="new_articles_title">Новые статьи</string>
+    <string name="recommend_products">Рекомендованные товары</string>
+    <string name="clubs_others_title">Другие клубы</string>
+    <string name="subscribe_title">Подписаться на клуб</string>
+    <string name="subscribed_title">Вы подписаны</string>
+    <string name="subscribe">Подписаться</string>
+    <string name="all_clubs">Все клубы</string>
+    <!-- Favorite article screen-->
+    <string name="favorite_title">Избранное</string>
+    <string name="nothing_found_title">По вашему запросу ничего не найдено</string>
+    <string name="favorite_default_filter_title">Все избранные</string>
+    <string name="category_read_also">Читайте также</string>
+    <string name="subscribe_to_new_article">Подпишитесь на рассылку новых статей и полезных материалов</string>
+    <string name="uncorrect_email">Некорректный Email</string>
+    <string name="consent_to_mailing_text">Я даю согласие на получение \n рекламно-информационной рассылки  (email).</string>
+    <string name="required_field_notification">Это поле является обязательным</string>
+    <string name="error_message_title">Произошла непредвиденная ошибка, попробуйте позднее</string>
+    <string name="subscription_club_message_title">Подписка на клуб оформлена</string>
+    <string name="favorite_club_message_title">Клуб добавлен в избранное</string>
+    <string name="remove_favorite_club_message_title">Клуб удален из избранного</string>
+    <string name="favorite_club_exist_message_title">Клуб уже в избранном</string>
+    <string name="article_dialog_title">Понравилась статья?</string>
+    <string name="article_dialog_text">Подпишитесь на рассылку\n новых статей и полезных материалов</string>
+    <string name="unsubscribe">Отписаться</string>
+    <string name="push_settings">Настроить рассылки</string>
+    <string name="subscribe_settings">Настроить подписки</string>
+    <string name="mailing_of_clubs">Получать рассылки по клубам на E-mail</string>
+    <string name="no_mailing_of_clubs">Отписаться от рассылок по клубам</string>
+    <string name="receive_push_notification">Получать push-уведомления</string>
+    <string name="no_receive_push_notification">Не получать push-уведомления</string>
+    <string name="mailing_of_telegram">Получать рассылки в telegram</string>
+    <string name="no_mailing_of_telegram">Не получать рассылки в telegram</string>
+    <string name="mailing_of_sms">Получать рассылки по клубам на sms</string>
+    <string name="no_mailing_of_sms">Не получать рассылки по клубам на sms</string>
+    <string name="filter_club_all_clubs_title">Все клубы</string>
+    <string name="filter_club_favorite_clubs_title">Только мои клубы</string>
+    <string name="filter_club_favorite_screen_title">Избранное</string>
+    <string name="subscription_success_title">Вы успешно подписались!</string>
+
+    <string name="club_notification_channel_id">fcm_club_channel</string>
+    <string name="club_notification_channel_name">Клубы</string>
 </resources>
